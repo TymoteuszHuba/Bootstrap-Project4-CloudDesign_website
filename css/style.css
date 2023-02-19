@@ -1,0 +1,875 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ddd;
+  font-family: "Poppins", sans-serif;
+}
+
+.shadow-theme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.nav-change-color {
+  background-color: #000;
+}
+
+.section-title {
+  margin-bottom: 3em;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: 0.2em;
+}
+
+.section-text {
+  margin-bottom: 4em;
+  font-size: 1.5rem;
+}
+
+.tooltip {
+  padding-bottom: 2em;
+}
+.tooltip-inner {
+  max-width: 30em;
+  padding: 1.2em 1.8em;
+  font-size: 1.5em;
+  color: rgb(174, 174, 174);
+  border-radius: 15px;
+}
+
+.navbar {
+  width: 100%;
+  padding: 1.8em;
+  transition: background-color 0.2s linear;
+  z-index: 5;
+}
+.navbar-brand {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+.navbar-brand:hover {
+  color: #fff;
+}
+.navbar-brand:focus {
+  color: rgb(255, 212, 84);
+}
+.navbar-toggler {
+  border: 1px solid transparent;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-collapse {
+  padding: 0;
+  margin: 2rem 0 0 0;
+  text-align: center;
+  font-size: 2rem;
+  overflow-y: scroll !important;
+}
+.navbar-collapse ul {
+  height: 100vh;
+  margin-top: 50px;
+}
+.navbar-collapse ul .nav-item {
+  padding: 2rem 0;
+}
+.navbar-collapse ul .nav-link {
+  color: rgb(174, 174, 174);
+}
+.navbar-collapse ul .nav-link:hover {
+  color: #fff;
+}
+.navbar .active {
+  color: #fff !important;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+}
+.header .carousel {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.header .carousel-item {
+  height: 100vh;
+  width: 100%;
+  background-position: 50% 0;
+  background-size: cover;
+  z-index: 0;
+}
+.header .carousel-img-one {
+  background-image: url("../img/clouds-gb1a5049f0_640.jpg");
+}
+.header-description-content {
+  height: 100vh;
+  z-index: 1;
+}
+.header-text {
+  margin-bottom: 2.5em;
+  color: #fff;
+  font-size: 1.8rem;
+  opacity: 0.5;
+}
+.header-text-carousel {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+.header .change_outer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 75px;
+  overflow: hidden;
+  transform: translate(-50%, 0);
+}
+.header .change_outer .change_inner {
+  position: relative;
+  animation: rotate 10s ease-in-out infinite;
+}
+.header .change_outer .element {
+  display: block;
+  width: auto;
+  text-align: center;
+  letter-spacing: 1.2rem;
+  text-transform: uppercase;
+}
+.header-box-buttons {
+  width: 100%;
+  margin-top: 5em;
+  z-index: 1;
+}
+.header-box-buttons .btn {
+  padding: 0.4em 1em;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.header-box-buttons .btn-about {
+  background-color: #fff;
+}
+.header-box-buttons .btn-services {
+  background-color: rgb(255, 212, 84);
+}
+.header-box-buttons .btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@keyframes rotate {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  25%, 45% {
+    transform: translateY(-75px);
+  }
+  50%, 70% {
+    transform: translateY(-150px);
+  }
+  75%, 95% {
+    transform: translateY(-225px);
+  }
+  100% {
+    transform: translateY(-300px);
+  }
+}
+.about-us {
+  height: 100%;
+  overflow: hidden;
+}
+.about-us-gallery {
+  position: relative;
+  width: 100%;
+  height: 50em;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+.about-us-gallery-me {
+  background-image: url("/img/team/entrepreneur-g4d572394d_1920.jpg");
+}
+.about-us-gallery-team {
+  background-image: url("/img/team/entrepreneur-geb6f9a43e_1920.jpg");
+}
+.about-us-description {
+  height: 60em;
+  padding: 0 1.8em;
+  margin: 2.8em 0;
+}
+.about-us-btn {
+  padding: 0.6em 1.2em;
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  box-shadow: inset 0 0 0 rgb(255, 212, 84);
+}
+.about-us-btn:hover {
+  box-shadow: inset 400px 0 0 0 rgb(255, 212, 84);
+}
+.about-us-numbers {
+  height: 100%;
+  padding: 6em 0;
+  background-color: #fff;
+}
+.about-us-numbers .number-calc {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.about-us-numbers .number-text {
+  font-size: 1.8rem;
+  opacity: 0.5;
+}
+.about-us-ask {
+  height: 100%;
+  padding: 10em 3em;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+.about-us-ask-btn {
+  padding: 0.6em 1.2em;
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  background-color: rgb(255, 212, 84);
+  box-shadow: inset 0 0 0 #fff;
+  color: #000;
+}
+.about-us-ask-btn:hover {
+  box-shadow: inset 400px 0 0 0 #fff;
+  color: #000;
+}
+
+.what-we-do {
+  height: 100%;
+  padding-top: 14em;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+.what-we-do-icon {
+  position: relative;
+  width: 8em;
+  height: 8em;
+  background-color: #000;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+.what-we-do-icon .fa-solid {
+  font-size: 2.5em;
+  color: #fff;
+}
+.what-we-do-icon::after {
+  content: " ";
+  position: absolute;
+  width: 9em;
+  height: 9em;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 50%;
+  opacity: 0.3;
+  transform: scale(0);
+  transition: transform 0.2s linear;
+}
+.what-we-do-icon:hover::after {
+  transform: scale(1);
+}
+.what-we-do-text {
+  padding: 1.5em 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.what-we-do .development {
+  position: relative;
+  height: 100%;
+}
+.what-we-do .development-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/meeting-g8e4aac5d4_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  z-index: 0;
+}
+.what-we-do .development-cards {
+  padding: 8em 1.8em;
+}
+.what-we-do .development .card {
+  padding: 2em 1.8em;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+.what-we-do .development .card .fa-solid {
+  padding: 0.7em;
+  font-size: 3rem;
+}
+.what-we-do .development .card-body {
+  text-align: center;
+}
+.what-we-do .development .card-title {
+  margin-bottom: 0.8em;
+  font-size: 2rem;
+}
+.what-we-do .development .card-text {
+  font-size: 1.4em;
+}
+.what-we-do .innovations {
+  height: 100%;
+  padding: 8em 1.8em;
+  background-color: #fff;
+  text-align: center;
+}
+.what-we-do .innovations-box {
+  padding: 2em 1.5em;
+}
+.what-we-do .innovations-box-number {
+  font-size: 2.5rem;
+  color: rgb(174, 174, 174);
+}
+.what-we-do .innovations-box-title {
+  margin-bottom: 1em;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.what-we-do .innovations-box-text {
+  font-size: 1.4rem;
+}
+.what-we-do .our-services {
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
+.what-we-do .our-services-bg {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  background-image: url("/img/apple-g08d3db820_1920.jpg");
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+.what-we-do .our-services-box {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  padding: 10em 1.8em;
+  color: #fff;
+  z-index: 1;
+}
+
+.skills {
+  height: 100%;
+  padding: 10em 1.8em;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+.skills-box {
+  width: 100%;
+  padding: 2em 1em;
+}
+.skills .fa-brands, .skills .fa-solid {
+  font-size: 4rem;
+  padding-bottom: 0.5em;
+}
+.skills .progress-bar {
+  width: 0%;
+  transition: width 2.5s ease;
+}
+
+.portfolio {
+  height: 100%;
+  padding: 14em 1em;
+  text-align: center;
+  background-color: #fff;
+}
+.portfolio-button {
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  transition: opacity 0.2s linear;
+}
+.portfolio-button:hover {
+  opacity: 1;
+}
+.portfolio-button:focus {
+  opacity: 1;
+}
+.portfolio-gallery {
+  padding-top: 5em;
+  line-height: 0;
+  column-count: 1;
+}
+.portfolio-gallery-box {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin: 2em 0;
+  overflow: hidden;
+  background-color: #000;
+  cursor: pointer;
+  z-index: 0;
+}
+.portfolio-gallery-box-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s linear;
+}
+.portfolio-gallery-box-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: #fff;
+  font-size: 1.6rem;
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+.portfolio-gallery-box:hover .portfolio-gallery-box-img {
+  transform: translateY(-60px);
+}
+
+.modal-content {
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-align: center;
+  color: #fff;
+}
+.modal-content-body {
+  padding: 0 !important;
+}
+.modal-content .numbertext {
+  font-size: 1.6em;
+}
+
+.modal-header {
+  border-width: 0;
+}
+
+.btn-close {
+  background-color: #fff;
+}
+
+.opinions {
+  height: 100%;
+  padding: 8em 1em;
+  text-align: center;
+}
+.opinions .carousel-indicators {
+  bottom: -4em;
+  margin: 0 !important;
+}
+.opinions .carousel-indicators button {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin: 0 1em;
+  background-color: rgb(174, 174, 174) !important;
+  border-radius: 50%;
+}
+.opinions .carousel-indicators button::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  opacity: 0.5;
+  transform: scale(0);
+  transition: transform 0.2s linear;
+}
+.opinions .carousel-indicators button:hover::after {
+  transform: scale(1);
+}
+.opinions .card {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.opinions .card-box-img {
+  position: relative;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+}
+.opinions .card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.opinions .card-img-one {
+  background-image: url("/img/opinions/pexels-george-milton-6954008.jpg");
+}
+.opinions .card-img-two {
+  background-image: url("/img/opinions/pexels-george-milton-7034632.jpg");
+}
+.opinions .card-img-three {
+  background-image: url("/img/opinions/pexels-ketut-subiyanto-4307884.jpg");
+}
+.opinions .card-img-four {
+  background-image: url("/img/opinions/pexels-monstera-5384445.jpg");
+}
+.opinions .card-title {
+  margin: 1.5em 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+}
+.opinions .card-text {
+  max-width: 800px;
+  padding: 0 4em;
+  font-size: 1.3rem;
+  opacity: 0.5;
+}
+
+.contact-address {
+  position: relative;
+  height: 100%;
+  padding-top: 72px;
+  color: #fff;
+  text-align: center;
+}
+.contact-address .section-title {
+  padding-top: 4em;
+  margin-bottom: 0;
+}
+.contact-address-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/pexels-fauxels-3184339.jpg");
+  object-fit: cover;
+  background-position: bottom;
+  background-size: cover;
+  z-index: -1;
+}
+.contact-address-box {
+  padding: 5em 1em;
+}
+.contact-address-box-text {
+  font-size: 1.5rem;
+}
+.contact-address-item {
+  padding: 2em 0;
+}
+.contact-address .fa-solid {
+  margin-bottom: 0.5em;
+  font-size: 4em;
+  color: rgb(255, 212, 84);
+}
+
+.contact-form {
+  height: 100%;
+  padding: 8em 3em;
+  background-color: #fff;
+}
+.contact-form .container {
+  max-width: 800px;
+}
+.contact-form .form-label, .contact-form .form-control, .contact-form .form-select, .contact-form .form-check-label, .contact-form .form-check-input {
+  font-size: 1.4rem;
+}
+.contact-form .form-control:focus, .contact-form .form-select:focus {
+  box-shadow: none;
+  border-color: rgb(255, 212, 84);
+}
+.contact-form .form-check-input:checked, .contact-form .form-check-input:focus {
+  background-color: rgb(255, 212, 84);
+  box-shadow: none;
+}
+.contact-form textarea {
+  height: 100px;
+}
+.contact-form .btn {
+  padding: 0.5em 2em;
+  font-size: 1.4em;
+}
+
+.footer {
+  height: 100%;
+  padding: 6em 1em;
+  background-color: #000;
+  color: rgb(174, 174, 174);
+}
+.footer-title {
+  margin-bottom: 1.2em;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+.footer-title .fa-solid {
+  color: #fff;
+}
+.footer-text {
+  font-size: 1.5em;
+}
+.footer-links {
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+.footer-link {
+  padding: 0 0.5em;
+  color: rgb(174, 174, 174);
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+.footer-link:hover {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.8rem;
+  }
+  .section-text {
+    font-size: 1.6rem;
+  }
+  .navbar-brand {
+    font-size: 2.4rem;
+  }
+  .navbar-collapse {
+    font-size: 2.4rem;
+  }
+  .header-text {
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+  }
+  .header-text-carousel {
+    font-size: 3.3rem;
+  }
+  .header .change_outer .element {
+    letter-spacing: 1.8rem;
+  }
+  .header-box-buttons .btn {
+    padding: 0.6em 1.2em;
+  }
+  .about-us-btn {
+    font-size: 1.7rem;
+  }
+  .about-us-gallery {
+    height: 60em;
+  }
+  .about-us-numbers .number-calc {
+    font-size: 4rem;
+  }
+  .about-us-numbers .number-text {
+    font-size: 2rem;
+    opacity: 0.5;
+  }
+  .about-us-ask-btn {
+    font-size: 1.7rem;
+  }
+  .what-we-do-icon {
+    width: 10em;
+    height: 10em;
+  }
+  .what-we-do-icon .fa-solid {
+    font-size: 3.5em;
+    color: #fff;
+  }
+  .what-we-do-icon::after {
+    width: 11em;
+    height: 11em;
+  }
+  .what-we-do-text {
+    padding: 1.5em 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  .skills-box {
+    padding: 2em 4em;
+  }
+  .skills .fa-brands, .skills .fa-solid {
+    font-size: 4rem;
+    padding-bottom: 0.5em;
+  }
+  .skills .progress {
+    margin-top: 1.5em;
+  }
+  .opinions .card-box-img {
+    width: 15em;
+    height: 15em;
+  }
+  .opinions .card-title {
+    font-size: 1.8rem;
+  }
+  .opinions .card-text {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .navbar {
+    padding: 2em;
+  }
+  .navbar-collapse {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  .navbar-collapse ul {
+    height: 100%;
+    margin-top: 0;
+  }
+  .navbar-collapse ul .nav-item {
+    padding: 0 0.5em;
+  }
+  .navbar-collapse ul .nav-item::after {
+    content: " ";
+    width: 0;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    transition: 300ms;
+  }
+  .navbar-collapse ul .nav-item:hover::after {
+    width: 100%;
+  }
+  .what-we-do .development .card .fa-solid {
+    padding: 0.7em;
+    font-size: 4rem;
+  }
+  .what-we-do .development .card-body {
+    text-align: left;
+  }
+  .what-we-do .innovations-box-number {
+    font-size: 3.5rem;
+  }
+  .what-we-do .innovations-box-title {
+    margin-bottom: 1em;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+  .portfolio-button {
+    font-size: 1.4em;
+    letter-spacing: 0.3em;
+  }
+  .portfolio-gallery {
+    column-count: 2;
+  }
+  .contact-address-box {
+    padding: 6em 1em;
+  }
+  .contact-address-text {
+    margin-bottom: 0;
+  }
+  .contact-address .fa-solid {
+    margin-bottom: 0;
+    margin-right: 0.5em;
+    font-size: 4em;
+    color: rgb(255, 212, 84);
+  }
+  .contact-form .form-label, .contact-form .form-control, .contact-form .form-select, .contact-form .form-check-label, .contact-form .form-check-input {
+    font-size: 1.6rem;
+  }
+  .contact-form .form-check-input:checked, .contact-form .form-check-input:focus {
+    background-color: rgb(255, 212, 84);
+    box-shadow: none;
+  }
+  .contact-form textarea {
+    height: 200px;
+  }
+  .contact-form .btn {
+    padding: 0.5em 2em;
+    font-size: 1.6rem;
+  }
+  .footer-title {
+    margin-bottom: 1.2em;
+    font-size: 2.8em;
+  }
+  .footer-text {
+    font-size: 1.6em;
+  }
+  .footer-links {
+    margin-bottom: 1em;
+    font-size: 2.4em;
+  }
+  .footer-link {
+    padding: 0 1em;
+    color: rgb(174, 174, 174);
+    text-decoration: none;
+    transition: color 0.3s linear;
+  }
+  .footer-link:hover {
+    color: #fff;
+  }
+}
+@media (min-width: 1200px) {
+  .about-us-gallery {
+    height: 80vh;
+  }
+  .about-us-description {
+    height: 80vh;
+    padding: 0 2.8em;
+    margin: 0 0;
+  }
+  .skills .fa-brands, .skills .fa-solid {
+    font-size: 5rem;
+  }
+  .skills .progress {
+    margin-top: 2em;
+  }
+}
+@media (min-width: 1400px) {
+  .navbar-brand {
+    letter-spacing: 1rem;
+  }
+  .about-us-numbers {
+    padding: 6em 0;
+  }
+  .about-us-numbers .number-calc {
+    font-size: 5rem;
+  }
+  .what-we-do .innovations-box-text {
+    font-size: 1.8rem;
+  }
+  .portfolio-gallery {
+    column-count: 3;
+  }
+}/*# sourceMappingURL=style.css.map */

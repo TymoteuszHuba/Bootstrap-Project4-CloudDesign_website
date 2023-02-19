@@ -1,0 +1,1565 @@
+@use './components';
+@use './colors';
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    // position: relative;
+    background-color: colors.$color-body;
+    font-family: 'Poppins', sans-serif;
+}
+
+.shadow-theme
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$color-shadow-theme;
+    z-index: -1;
+}
+
+.nav-change-color
+{
+    // background-color: rgb(55, 54, 54);
+    background-color: colors.$color-black;
+}
+
+.section-title
+{ 
+    margin-bottom: 3em;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    letter-spacing: 0.2em;   
+}
+
+.section-text
+{
+    margin-bottom: 4em;
+    font-size: 1.5rem;
+}
+
+.tooltip
+{
+    padding-bottom: 2em;
+
+    &-inner
+    {
+        max-width: 30em;
+        padding: 1.2em 1.8em;
+        font-size: 1.5em;
+        color: colors.$color-navlink;
+        border-radius: 15px;
+        // background-color: red !important;
+    }
+
+}
+
+// section
+// {
+//     padding-top: 72px;
+// }
+// --------- navigation -----------
+.navbar
+{
+    width: 100%;
+    padding: 1.8em;
+    // font-size: 2rem;
+    transition: background-color 0.2s linear;
+    z-index: 5;
+
+    &-brand
+    {
+        // padding-left: 0.5em;
+        font-size: 2rem;
+        color: colors.$color-white;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+    }
+
+    &-brand:hover
+    {
+        color: colors.$color-white;
+    }
+
+    &-brand:focus
+    {
+        color: colors.$color-hover;
+    }
+
+    
+    &-toggler
+    {
+        // padding-right: 2em;
+        border: 1px solid transparent;
+    }
+
+    &-toggler:focus
+    {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &-collapse
+    {
+        padding: 0;
+        margin: 2rem 0 0 0;
+        text-align: center;
+        font-size: 2rem;
+        overflow-y: scroll !important;
+
+        ul
+        {
+            height: 100vh;
+            margin-top: 50px;
+
+            .nav-item
+            {
+                padding: 2rem 0;
+            }
+
+            .nav-link
+            {
+                color: colors.$color-navlink;
+            }
+
+            .nav-link:hover
+            {
+                color: colors.$color-white;
+            }
+
+        }
+    }
+
+    // .hamburger-box
+    // {
+    //     margin: 2px 0;
+    //     // opacity: 0.4;
+    // }
+
+    .active
+    {
+        color: #fff !important;
+    }
+
+}
+
+// ----------- header -------------
+.header
+{
+    position: relative;
+    height: 100vh;
+
+    .carousel
+    {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+        &-item
+        {
+            height: 100vh;
+            width: 100%;
+            background-position: 50% 0;
+            background-size: cover;
+            z-index: 0;
+        }
+
+        &-img-one
+        {
+            background-image: url("../img/clouds-gb1a5049f0_640.jpg");
+        }
+    }
+    
+    &-description-content
+    {
+        // position: absolute;
+        // top: 0;
+        // width: 100%;
+        // height: 50%;
+        // text-align: center;
+        // transform: translate(0, 80%);
+        height: 100vh;
+        z-index: 1;
+    }
+
+    &-text
+    {
+        margin-bottom: 2.5em;
+        color: #fff;
+        font-size: 1.8rem;
+        opacity: 0.5;
+    }
+
+
+
+    &-text-carousel
+    {
+        position: relative;
+	    width: 100%;
+        height: 75px;
+        line-height: 75px;
+	    text-align: center;
+        font-size: 3rem;
+        color: #fff;
+
+    }
+
+    .change_outer
+    {
+        position: absolute;
+		top: 0;
+		left: 50%;
+        width: 100%;
+        height: 75px;
+		overflow: hidden;
+        transform: translate(-50%, 0);
+
+        .change_inner 
+        {
+			position: relative;
+			animation: rotate 10s ease-in-out infinite;
+		}
+
+        .element
+        {
+            display: block;
+            width: auto;
+            text-align: center;
+            letter-spacing: 1.2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &-box-buttons
+    {
+        width: 100%;
+        margin-top: 5em;
+        z-index: 1;
+
+        .btn
+        {
+            // margin: 2em;
+            padding: 0.4em 1em;
+            font-size: 1.4rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+
+            &-about
+            {
+                background-color: #fff;
+            }
+
+
+            &-services
+            {
+                background-color: rgb(255, 212, 84);
+            }
+        }
+
+        .btn:hover
+        {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    }
+
+}
+
+@keyframes rotate {
+	0%, 20% {
+		transform: translateY(0);
+	}
+	25%,45% {
+		transform: translateY(50px * -1.5);
+	}
+	50%,70% {
+		transform: translateY(50px * -3);
+	}
+	75%,95% {
+		transform: translateY(50px * -4.5);
+	}
+	100% {
+		transform: translateY(50px * -6);
+	}
+}
+
+// ----------- about me -------------
+.about-us
+{
+    height: 100%;
+    overflow: hidden;
+
+
+    &-gallery
+    {
+        position: relative;
+        width: 100%;
+        height: 50em;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+
+        &-me
+        {
+            background-image: url('/img/team/entrepreneur-g4d572394d_1920.jpg');
+        }
+
+        &-team
+        {
+            background-image: url('/img/team/entrepreneur-geb6f9a43e_1920.jpg');
+        }
+    }
+
+    &-description
+    {
+       height: 60em;
+       padding: 0 1.8em;
+       margin: 2.8em 0;
+    }
+
+    &-btn
+       {
+           @include components.mainBtn;
+           box-shadow: inset 0 0 0 rgb(255, 212, 84);
+       }
+
+       &-btn:hover
+       {
+        box-shadow: inset 400px 0 0 0 colors.$color-hover;
+       }
+
+
+    &-numbers
+    {
+        height: 100%;
+        padding: 6em 0;
+        background-color: colors.$color-white;
+        
+        .number-calc
+        {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .number-text
+        {
+            font-size: 1.8rem;
+            opacity: 0.5;
+        }
+    }
+
+    &-ask
+    {
+        height: 100%;
+        // width: 100%;
+        padding: 10em 3em;
+        text-align: center;
+        background-color: colors.$color-black;
+        color: colors.$color-white;
+
+        &-btn
+        {
+            @include components.mainBtn;
+            background-color: colors.$color-hover;
+            box-shadow: inset 0 0 0 colors.$color-white;
+            color: colors.$color-black;
+        }
+
+        &-btn:hover
+        {
+            box-shadow: inset 400px 0 0 0 colors.$color-white;
+            color: colors.$color-black;
+        }
+    }
+
+}
+// ----------- what-we-do -------------
+.what-we-do
+{
+    height: 100%;
+    padding-top: 14em;
+    background-color: colors.$color-white;
+    overflow-x: hidden;
+
+    &-icon
+    {
+        position: relative;
+        width: 8em;
+        height: 8em;
+        background-color: colors.$color-black;       
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        text-decoration: none;
+        // transition: box-shadow 0.1s linear, opacity 0.3s linear;
+
+        .fa-solid
+        {
+            font-size: 2.5em;
+            color: colors.$color-white;
+        }
+    }
+
+    &-icon::after
+    {
+        content: " ";
+        position: absolute;
+        width: 9em;
+        height: 9em;
+        background-color: colors.$color-white;
+        border: 1px solid black;
+        border-radius: 50%;
+        opacity: 0.3;
+        transform: scale(0);
+        transition: transform 0.2s linear;
+    }
+
+    &-icon:hover::after
+    {
+        transform: scale(1);
+    }
+
+
+    // &-icon:hover
+    // {
+    //     box-shadow: 0 0 0 8px rgba(0, 0, 0, 1);
+    //     opacity: 0.8;
+    // }
+
+    &-text
+    {
+        padding: 1.5em 0;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    // ----------- development -------------
+    .development
+    {
+        position: relative;
+        height: 100%;
+
+        &-bg
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("/img/meeting-g8e4aac5d4_1920.jpg");
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        &-cards
+        {
+            padding: 8em 1.8em;
+        }
+
+        .card
+        {
+            // max-width: 800px;
+            padding: 2em 1.8em;
+            background-color: colors.$color-black;
+            color: colors.$color-white;
+            border-radius: 8px;
+            opacity: 0.8;
+
+            .fa-solid
+            {
+                padding: 0.7em;
+                font-size: 3rem;
+            }
+
+            &-body
+            {
+                // padding: 0.7em 1.4em;
+                text-align: center;
+            }
+
+            &-title
+            {
+                margin-bottom: 0.8em;
+                font-size: 2rem;
+            }
+
+            &-text
+            {
+                font-size: 1.4em;
+            }
+        }
+
+    }
+
+    // ----------- innovations -------------
+    .innovations
+    {
+        height: 100%;
+        padding: 8em 1.8em;
+        background-color: colors.$color-white;
+        text-align: center;
+
+        &-box
+        {
+            padding: 2em 1.5em;
+
+            &-number
+            {
+                font-size: 2.5rem;
+                color: colors.$color-navlink;
+            }
+
+            &-title
+            {
+                margin-bottom: 1em;
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+            }
+
+            &-text
+            {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    // ----------- question -------------
+    .our-services
+    {
+        position: relative;
+        height: 100%;
+        text-align: center;
+
+
+        &-bg
+        {
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            background-image: url("/img/apple-g08d3db820_1920.jpg");
+            object-fit: cover;
+            background-position: center;
+            background-size: cover;
+            z-index: 0;
+        }
+
+        &-box
+        {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            padding: 10em 1.8em;
+            color: colors.$color-white;
+            z-index: 1;
+        }
+
+    }
+    
+}
+
+// ----------- skills -------------
+.skills
+{
+    height: 100%;
+    padding: 10em 1.8em;
+    text-align: center;
+    background-color: colors.$color-black;
+    color: colors.$color-white;
+
+    &-box
+    {
+        width: 100%;
+        padding: 2em 1em;
+        // height: 100px;
+    }
+
+    .fa-brands, .fa-solid
+    {
+        font-size: 4rem;
+        padding-bottom: 0.5em;
+    }
+
+    // .progress
+    // {
+    //     margin-top: 3em;
+    // }
+
+    .progress-bar
+    {
+        width: 0%;     
+        transition: width 2.5s ease;
+    }
+
+
+    // @keyframes html-bar
+    // {
+    //     0%
+    //     {
+    //         width: 0;
+    //     }
+    //     100%
+    //     {
+    //         width: 50%;
+    //     }
+    // }
+
+    // @keyframes css-bar 
+    // {
+    //     0%
+    //     {
+    //         width: 0;
+    //     }
+    //     100%
+    //     {
+    //         width: 40%;
+    //     }
+    // }
+
+    // @media (prefers-reduced-motion: no-preference)
+    // {
+    //     .html-animation
+    //     {
+    //         animation: html-bar 3s ease 1;
+    //     }
+        
+    //     .css-animation
+    //     {
+    //         animation: css-bar 3s ease 1;
+    //     }
+    // }
+
+}
+
+// ----------- portfolio -------------
+.portfolio
+{
+    height: 100%;
+    padding: 14em 1em;
+    text-align: center;
+    background-color: colors.$color-white;
+
+    &-button
+    {
+        border: 1px solid transparent;
+        background-color: transparent;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: colors.$color-black;
+        letter-spacing: 0.1em;
+        opacity: 0.6;
+        transition: opacity 0.2s linear;
+    }
+
+    &-button:hover
+    {
+        opacity: 1;
+    }
+
+    &-button:focus
+    {
+        opacity: 1;
+    }
+
+   &-gallery
+   {
+        // position: relative;
+        padding-top: 5em;
+        line-height: 0;
+        column-count: 1;
+
+        &-box
+        {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            margin: 2em 0;
+            overflow: hidden;
+            background-color: colors.$color-black;
+            cursor: pointer;
+            z-index: 0;
+
+            &-img
+            {
+                width: 100%;
+                height: auto;
+                // opacity: 0.8;
+                transition: transform 0.2s linear;
+            }
+
+            &-text
+            {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                color: colors.$color-white;
+                font-size: 1.6rem;
+                transform: translate(-50%, 0);
+                z-index: -1;
+            }
+
+            
+
+        }
+
+        &-box:hover &-box-img
+        {
+            transform: translateY(-60px);
+        }
+
+   }
+
+    
+}
+
+.modal-content
+{
+    background-color: transparent;
+    border: 1px solid transparent;
+    text-align: center;
+    color: colors.$color-white;
+
+
+    
+    &-body
+    {
+        padding: 0 !important;
+    }
+
+    .numbertext
+    {
+        font-size: 1.6em;
+    }
+}
+.modal-header
+{
+    border-width: 0;
+}
+.btn-close
+{
+    background-color: colors.$color-white;
+}
+
+// ----------- opinions -------------
+.opinions
+{
+    height: 100%;
+    padding: 8em 1em;
+    text-align: center; 
+    
+
+    .carousel-indicators
+    {
+        bottom: -4em;
+        margin: 0 !important;
+
+        button
+        {
+            position: relative;
+            width: 10px;
+            height: 10px;
+            margin: 0 1em;
+            background-color: colors.$color-navlink !important;
+            border-radius: 50%;
+        }
+
+        button::after
+        {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: colors.$color-black;
+            border-radius: 50%;
+            opacity: 0.5;
+            transform: scale(0);
+            transition: transform 0.2s linear;
+        }
+
+        button:hover::after
+        {
+            transform: scale(1);
+        }
+
+    }
+
+    .card
+    {
+        background-color: transparent;
+        border: 1px solid transparent;
+
+        &-box-img
+        {
+            position: relative;
+            width: 11em;
+            height: 11em;
+            border-radius: 50%;
+        }
+
+        &-img
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+
+            &-one
+            {
+                background-image: url("/img/opinions/pexels-george-milton-6954008.jpg");
+            }
+            &-two
+            {
+                background-image: url("/img/opinions/pexels-george-milton-7034632.jpg");
+            }
+            &-three
+            {
+                background-image: url("/img/opinions/pexels-ketut-subiyanto-4307884.jpg");
+            }
+            &-four
+            {
+                background-image: url("/img/opinions/pexels-monstera-5384445.jpg");
+            }
+        }    
+
+        &-title
+        {
+            margin: 1.5em 0;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        &-text
+        {
+            max-width: 800px;
+            padding: 0 4em;
+            font-size: 1.3rem;
+            opacity: 0.5;
+        }
+    }
+   
+
+}
+
+// ----------- contact -------------
+.contact-address
+{
+    position: relative;
+    height: 100%;
+    padding-top: 72px;
+    // padding: 8em 1em;
+    // background-color: colors.$color-white;
+    color: colors.$color-white;
+    text-align: center;
+
+    .section-title
+    {
+        padding-top: 4em;
+        margin-bottom: 0;
+    }
+
+    &-bg
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('/img/pexels-fauxels-3184339.jpg');
+        object-fit: cover;
+        background-position: bottom;
+        background-size: cover;
+        z-index: -1;
+    }
+
+
+    &-box
+    {
+        padding: 5em 1em;
+
+        &-text
+        {
+            font-size: 1.5rem;
+        }
+    }
+
+    &-item
+    {
+        padding: 2em 0;
+    }
+
+    // &-box:last-child
+    // {
+    //     padding-bottom: 8em;
+    // }
+
+    .fa-solid
+    {
+        margin-bottom: 0.5em;
+        font-size: 4em;
+        color: colors.$color-hover;
+    }
+
+
+
+
+}
+
+.contact-form
+{
+    height: 100%;
+    padding: 8em 3em;
+    background-color: colors.$color-white;
+
+    .container
+    {
+        max-width: 800px;
+    }
+    
+
+    .form-label, .form-control, .form-select, .form-check-label, .form-check-input
+    {
+        font-size: 1.4rem;
+    }
+
+    .form-control:focus, .form-select:focus
+    {
+       box-shadow: none;
+       border-color: colors.$color-hover;
+    }
+
+   .form-check-input:checked, .form-check-input:focus
+   {
+        background-color: colors.$color-hover;
+        box-shadow: none;
+   }
+
+   textarea
+   {
+        height: 100px;
+   }
+
+   .btn
+   {
+        padding: .5em 2em;
+        font-size: 1.4em;
+   }
+
+}
+
+// --------------- footer ---------------------------
+.footer
+{
+    height: 100%;
+    padding: 6em 1em;
+    background-color: colors.$color-black;
+    color: colors.$color-navlink;
+
+
+    &-title
+    {
+        margin-bottom: 1.2em;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+
+        .fa-solid
+        {
+            color: colors.$color-white;
+        }
+    }
+
+    &-text
+    {
+        font-size: 1.5em;
+    }
+
+    &-links
+    {
+        margin-bottom: 1em;
+        font-size: 1.8em;
+    }
+
+    &-link
+    {
+        padding: 0 0.5em;
+        color: colors.$color-navlink;
+        text-decoration: none;
+        transition: color 0.3s linear;
+    }
+
+    &-link:hover
+    {
+        color: colors.$color-white;
+    }
+
+}
+
+// --------------- media queries --------------------
+@media(min-width: 768px)
+{
+    .section-title
+    {
+        font-size: 2.8rem;
+    }
+
+    .section-text
+    {
+        font-size: 1.6rem;
+    }
+
+    // --------- navigation -----------
+    .navbar
+    {
+        &-brand
+        {
+            // padding-left: 0.5em;
+            font-size: 2.4rem;
+        }
+
+        &-collapse
+        {
+            font-size: 2.4rem;
+        }
+    }
+
+    // ----------- header -------------
+    .header
+    {
+        
+        &-text
+        {
+            font-size: 1.4rem;
+            letter-spacing: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        &-text-carousel
+        {
+            font-size: 3.3rem;
+        }
+
+        .change_outer
+        {
+
+            .element
+            {
+                letter-spacing: 1.8rem;
+            }
+        }
+
+        &-box-buttons
+        {
+            .btn
+            {
+                // font-size: 1.4rem;
+                padding: 0.6em 1.2em;
+            }
+
+        }
+
+    }
+
+    // ----------- about me -------------
+    .about-us
+    {
+        &-btn
+        {
+            font-size: 1.7rem;
+        }
+
+        &-gallery
+        {
+            height: 60em;
+        }
+
+        &-numbers
+        {
+            
+            .number-calc
+            {
+                font-size: 4rem;
+                // font-weight: bold;
+            }
+
+            .number-text
+            {
+                font-size: 2rem;
+                opacity: 0.5;
+            }
+
+        }
+
+        &-ask-btn
+        {
+            font-size: 1.7rem;
+        }
+    }
+
+    // ---------- what we do -----------------
+    .what-we-do
+    {
+        &-icon
+        {
+            width: 10em;
+            height: 10em;
+
+            .fa-solid
+            {
+                font-size: 3.5em;
+                color: colors.$color-white;
+            }
+        }
+
+        &-icon::after
+        {
+            width: 11em;
+            height: 11em;
+        }
+
+
+        &-text
+        {
+            padding: 1.5em 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+
+    }
+
+    // ---------- skills ---------------
+    .skills
+    {
+
+        &-box
+        {
+            padding: 2em 4em;
+            // height: 100px;
+        }
+
+        .fa-brands, .fa-solid
+        {
+            font-size: 4rem;
+            padding-bottom: 0.5em;
+        }
+
+        .progress
+        {
+            margin-top: 1.5em;
+        }
+
+    }
+    
+    // ----------- opinions -------------
+    .opinions
+    {
+
+
+        .card
+        {
+
+            &-box-img
+            {
+                width: 15em;
+                height: 15em;
+            }
+ 
+
+            &-title
+            {
+                font-size: 1.8rem;
+            }
+
+            &-text
+            {
+                font-size: 1.5rem;
+            }
+        }
+    
+
+    }
+
+}
+
+@media(min-width: 992px)
+{
+    .navbar
+    {
+        padding: 2em;
+
+
+        &-collapse
+        {
+            margin: 0;
+            font-size: 1.8rem;
+
+            ul
+            {
+                height: 100%;
+                margin-top: 0;
+
+                .nav-item
+                {
+                    padding: 0 0.5em;
+                }
+
+        
+                .nav-item::after
+                {
+                    content: " ";
+                    width: 0;
+                    height: 1px;
+                    // left: 50%;
+                    display: block;
+                    background-color: colors.$color-white;
+                    transition: 300ms;
+                }
+
+                .nav-item:hover::after
+                {
+                    width: 100%;
+                    
+                }
+            }
+        }
+
+    }
+
+    .what-we-do
+    {
+        .development
+        {
+
+            .card
+            {
+                .fa-solid
+                {
+                    padding: 0.7em;
+                    font-size: 4rem;
+                }
+
+                &-body
+                {
+                    text-align: left;
+                }
+
+            }
+        }
+        // ----------- innovations -------------
+        .innovations
+        {    
+            &-box
+            {
+                &-number
+                {
+                    font-size: 3.5rem;
+                }
+
+                &-title
+                {
+                    margin-bottom: 1em;
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.3em;
+                }
+
+            }
+        }
+    }
+
+    .portfolio
+    {
+
+        &-button
+        {
+            font-size: 1.4em;
+            letter-spacing: 0.3em;
+        }
+
+        &-gallery
+        {
+                column-count: 2;
+
+        }
+
+        
+    }
+
+    // ----------- contact -------------
+    .contact-address
+    {
+
+        &-box
+        {
+            padding: 6em 1em;
+        }
+
+        &-text
+        {
+            margin-bottom: 0;
+        }
+
+        // &-box:last-child
+        // {
+        //     padding-bottom: 8em;
+        // }
+
+        .fa-solid
+        {
+            margin-bottom: 0;
+            margin-right: 0.5em;
+            font-size: 4em;
+            color: colors.$color-hover;
+        }
+
+    }
+
+    .contact-form
+    {
+
+
+        .form-label, .form-control, .form-select, .form-check-label, .form-check-input
+        {
+            // max-width: 600px;
+            font-size: 1.6rem;
+        }
+
+        .form-check-input:checked, .form-check-input:focus
+        {
+                background-color: colors.$color-hover;
+                box-shadow: none;
+        }
+
+        textarea
+        {
+            height: 200px;
+        }
+
+        .btn
+        {
+                padding: .5em 2em;
+                font-size: 1.6rem;
+        }
+
+    }
+
+    // --------------- footer ---------------------------
+    .footer
+    {   
+
+
+        &-title
+        {
+            margin-bottom: 1.2em;
+            font-size: 2.8em;
+        }
+
+        &-text
+        {
+            font-size: 1.6em;
+        }
+
+        &-links
+        {
+            margin-bottom: 1em;
+            font-size: 2.4em;
+        }
+
+        &-link
+        {
+            padding: 0 1em;
+            color: colors.$color-navlink;
+            text-decoration: none;
+            transition: color 0.3s linear;
+        }
+
+        &-link:hover
+        {
+            color: colors.$color-white;
+        }
+
+    }
+
+}
+
+@media(min-width: 1200px)
+{
+    // .navbar
+    // {
+
+    //     &-brand
+    //     {
+    //         letter-spacing: 0.8rem;
+    //     }
+
+
+    //     &-collapse
+    //     {
+    //         font-size: 2.8rem;
+
+    //         ul
+    //         {
+
+    //             .nav-item
+    //             {
+    //                 padding: 0 0.5em;
+    //             }
+
+    //         }
+    //     }
+
+    // }
+
+    // ----------- about me -------------
+    .about-us
+    {
+        // height: 92vh;
+
+        &-gallery
+        {
+            height: 80vh;
+        }
+
+        &-description
+        {
+            height: 80vh;
+            padding: 0 2.8em;
+            margin: 0 0;
+        }
+
+    }
+
+//    .what-we-do
+//    {
+//         // ----------- development ----------
+//         .development
+//         {
+    
+//             .card
+//             {
+    
+//                 &-title
+//                 {
+//                     margin-bottom: 0.8em;
+//                     font-size: 2.8rem;
+//                 }
+    
+//                 &-text
+//                 {
+//                     font-size: 1.8em;
+//                 }
+//             }
+    
+//         }
+//    }
+     // ---------- skills ---------------
+     .skills
+     {
+ 
+ 
+         .fa-brands, .fa-solid
+         {
+             font-size: 5rem;
+         }
+ 
+         .progress
+         {
+             margin-top: 2em;
+         }
+ 
+     }
+    
+}
+
+@media(min-width: 1400px)
+{
+    .navbar
+    {
+        &-brand
+        {
+              letter-spacing: 1rem;
+        }
+    }
+
+    .about-us
+    {
+        // height: 99vh;
+
+        &-numbers
+        {
+            padding: 6em 0;
+
+            .number-calc
+            {
+                font-size: 5rem;
+            }
+
+            // .number-text
+            // {
+            //     font-size: 2.8rem;
+            // }
+        }
+    }
+
+    .what-we-do
+    {
+         // ----------- innovations -------------
+        .innovations
+        {
+            &-box
+            {
+                // padding: 2em 1.5em;
+
+                // &-number
+                // {
+                //     font-size: 5rem;
+                // }
+
+                // &-title
+                // {
+                //     margin-bottom: 1em;
+                //     font-size: 3rem;
+                //     text-transform: uppercase;
+                //     letter-spacing: 0.2em;
+                // }
+
+                &-text
+                {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    .portfolio
+    {
+        &-gallery
+        {
+                column-count: 3;
+
+        }
+    }
+}
