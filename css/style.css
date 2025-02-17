@@ -117,7 +117,8 @@ body {
   z-index: 0;
 }
 .header .carousel-img-one {
-  background-image: url("../img/clouds-gb1a5049f0_640.jpg");
+  background-attachment: fixed;
+  background-image: url("img/clouds-gb1a5049f0_640.jpg");
 }
 .header-description-content {
   height: 100vh;
@@ -211,10 +212,10 @@ body {
   object-fit: cover;
 }
 .about-us-gallery-me {
-  background-image: url("/img/team/entrepreneur-g4d572394d_1920.jpg");
+  background-image: url("img/team/entrepreneur-g4d572394d_1920.jpg");
 }
 .about-us-gallery-team {
-  background-image: url("/img/team/entrepreneur-geb6f9a43e_1920.jpg");
+  background-image: url("img/team/entrepreneur-geb6f9a43e_1920.jpg");
 }
 .about-us-description {
   height: 60em;
@@ -315,7 +316,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("/img/meeting-g8e4aac5d4_1920.jpg");
+  background-image: url("img/meeting-g8e4aac5d4_1920.jpg");
   background-position: center;
   background-size: cover;
   object-fit: cover;
@@ -376,7 +377,7 @@ body {
   position: absolute;
   width: 100%;
   height: 400px;
-  background-image: url("/img/apple-g08d3db820_1920.jpg");
+  background-image: url("img/apple-g08d3db820_1920.jpg");
   object-fit: cover;
   background-position: center;
   background-size: cover;
@@ -402,7 +403,8 @@ body {
   width: 100%;
   padding: 2em 1em;
 }
-.skills .fa-brands, .skills .fa-solid {
+.skills .fa-brands,
+.skills .fa-solid {
   font-size: 4rem;
   padding-bottom: 0.5em;
 }
@@ -544,16 +546,16 @@ body {
   border-radius: 50%;
 }
 .opinions .card-img-one {
-  background-image: url("/img/opinions/pexels-george-milton-6954008.jpg");
+  background-image: url("img/opinions/pexels-george-milton-6954008.jpg");
 }
 .opinions .card-img-two {
-  background-image: url("/img/opinions/pexels-george-milton-7034632.jpg");
+  background-image: url("img/opinions/pexels-george-milton-7034632.jpg");
 }
 .opinions .card-img-three {
-  background-image: url("/img/opinions/pexels-ketut-subiyanto-4307884.jpg");
+  background-image: url("img/opinions/pexels-ketut-subiyanto-4307884.jpg");
 }
 .opinions .card-img-four {
-  background-image: url("/img/opinions/pexels-monstera-5384445.jpg");
+  background-image: url("img/opinions/pexels-monstera-5384445.jpg");
 }
 .opinions .card-title {
   margin: 1.5em 0;
@@ -582,7 +584,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("/img/pexels-fauxels-3184339.jpg");
+  background-image: url("img/pexels-fauxels-3184339.jpg");
   object-fit: cover;
   background-position: bottom;
   background-size: cover;
@@ -611,14 +613,20 @@ body {
 .contact-form .container {
   max-width: 800px;
 }
-.contact-form .form-label, .contact-form .form-control, .contact-form .form-select, .contact-form .form-check-label, .contact-form .form-check-input {
+.contact-form .form-label,
+.contact-form .form-control,
+.contact-form .form-select,
+.contact-form .form-check-label,
+.contact-form .form-check-input {
   font-size: 1.4rem;
 }
-.contact-form .form-control:focus, .contact-form .form-select:focus {
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
   box-shadow: none;
   border-color: rgb(255, 212, 84);
 }
-.contact-form .form-check-input:checked, .contact-form .form-check-input:focus {
+.contact-form .form-check-input:checked,
+.contact-form .form-check-input:focus {
   background-color: rgb(255, 212, 84);
   box-shadow: none;
 }
@@ -726,7 +734,8 @@ body {
   .skills-box {
     padding: 2em 4em;
   }
-  .skills .fa-brands, .skills .fa-solid {
+  .skills .fa-brands,
+  .skills .fa-solid {
     font-size: 4rem;
     padding-bottom: 0.5em;
   }
@@ -805,10 +814,15 @@ body {
     font-size: 4em;
     color: rgb(255, 212, 84);
   }
-  .contact-form .form-label, .contact-form .form-control, .contact-form .form-select, .contact-form .form-check-label, .contact-form .form-check-input {
+  .contact-form .form-label,
+  .contact-form .form-control,
+  .contact-form .form-select,
+  .contact-form .form-check-label,
+  .contact-form .form-check-input {
     font-size: 1.6rem;
   }
-  .contact-form .form-check-input:checked, .contact-form .form-check-input:focus {
+  .contact-form .form-check-input:checked,
+  .contact-form .form-check-input:focus {
     background-color: rgb(255, 212, 84);
     box-shadow: none;
   }
@@ -849,7 +863,8 @@ body {
     padding: 0 2.8em;
     margin: 0 0;
   }
-  .skills .fa-brands, .skills .fa-solid {
+  .skills .fa-brands,
+  .skills .fa-solid {
     font-size: 5rem;
   }
   .skills .progress {
