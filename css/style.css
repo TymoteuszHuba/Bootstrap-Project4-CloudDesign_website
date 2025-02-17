@@ -118,7 +118,7 @@ body {
 }
 .header .carousel-img-one {
   background-attachment: fixed;
-  background-image: url("img/clouds-gb1a5049f0_640.jpg");
+  background-image: url("../img/clouds-gb1a5049f0_640.jpg");
 }
 .header-description-content {
   height: 100vh;
@@ -212,10 +212,10 @@ body {
   object-fit: cover;
 }
 .about-us-gallery-me {
-  background-image: url("img/team/entrepreneur-g4d572394d_1920.jpg");
+  background-image: url("/img/team/entrepreneur-g4d572394d_1920.jpg");
 }
 .about-us-gallery-team {
-  background-image: url("img/team/entrepreneur-geb6f9a43e_1920.jpg");
+  background-image: url("/img/team/entrepreneur-geb6f9a43e_1920.jpg");
 }
 .about-us-description {
   height: 60em;
@@ -316,7 +316,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("img/meeting-g8e4aac5d4_1920.jpg");
+  background-image: url("/img/meeting-g8e4aac5d4_1920.jpg");
   background-position: center;
   background-size: cover;
   object-fit: cover;
@@ -377,7 +377,7 @@ body {
   position: absolute;
   width: 100%;
   height: 400px;
-  background-image: url("img/apple-g08d3db820_1920.jpg");
+  background-image: url("/img/apple-g08d3db820_1920.jpg");
   object-fit: cover;
   background-position: center;
   background-size: cover;
@@ -546,16 +546,16 @@ body {
   border-radius: 50%;
 }
 .opinions .card-img-one {
-  background-image: url("img/opinions/pexels-george-milton-6954008.jpg");
+  background-image: url("/img/opinions/pexels-george-milton-6954008.jpg");
 }
 .opinions .card-img-two {
-  background-image: url("img/opinions/pexels-george-milton-7034632.jpg");
+  background-image: url("/img/opinions/pexels-george-milton-7034632.jpg");
 }
 .opinions .card-img-three {
-  background-image: url("img/opinions/pexels-ketut-subiyanto-4307884.jpg");
+  background-image: url("/img/opinions/pexels-ketut-subiyanto-4307884.jpg");
 }
 .opinions .card-img-four {
-  background-image: url("img/opinions/pexels-monstera-5384445.jpg");
+  background-image: url("/img/opinions/pexels-monstera-5384445.jpg");
 }
 .opinions .card-title {
   margin: 1.5em 0;
@@ -584,7 +584,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("img/pexels-fauxels-3184339.jpg");
+  background-image: url("/img/pexels-fauxels-3184339.jpg");
   object-fit: cover;
   background-position: bottom;
   background-size: cover;
